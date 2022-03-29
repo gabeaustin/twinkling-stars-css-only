@@ -6,9 +6,10 @@
 
 body {
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-section {
+/* section {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,9 +19,9 @@ section {
   background-position-x: center;
   background-size: cover;
   animation: animateBg 50% linear infinite;
-}
+} */
 
-@keyframes animateBg {
+/* @keyframes animateBg {
   0%, 100% {
     transform: scale(1);
   }
@@ -28,26 +29,21 @@ section {
   50% {
     transform: scale(1.2);
   }
-}
+} */
 
+/* this is how the stars move */
 span {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* START - this makes the stars shape */
   width: 4px;
-  /* should be 4% */
   height: 4px;
-  /* should be 4% */
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
-    0 0 0 8px rgba(255, 255, 255, 0.1),
-    0 0 20px rgba(255, 255, 255, 1);
   animation: animate 3s linear infinite;
 }
 
-span::before {
+/* span::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -56,11 +52,12 @@ span::before {
   height: 1px;
   background: linear-gradient(90deg, #fff,
       transparent);
-}
+} */
 
 @keyframes animate {
   0% {
-    transform: rotate(315deg) translateX(0);
+    /* transform: rotate(315deg) translateX(0); */
+    transform: rotate(-260deg) translateX(1000px);
     opacity: 1;
   }
 
@@ -69,7 +66,8 @@ span::before {
   }
 
   100% {
-    transform: rotate(315deg) translateX(-1000px);
+    /* transform: rotate(315deg) translateX(-1000px); */
+    transform: rotate(-260deg) translateX(0px);
     opacity: 0;
   }
 }
